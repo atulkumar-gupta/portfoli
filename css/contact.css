@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Caladea&family=Fira+Sans&family=Lato:wght@700&family=Montserrat:wght@500&family=Source+Code+Pro:wght@500&display=swap");
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Caladea', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: "Source Code Pro", monospace; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: rgb(72, 61, 139);
+  --secondaryColor: rgb(156, 137, 255);
+  --firaSans: "Fira Sans", sans-serif;
+  --montserrat: "Montserrat", sans-seriff;
+  --caladea: "Caladea", serif;
+  --lato: "Lato", sans-serif;
+  --bg: rgba(173, 216, 230, 0.7);
+  --source: "Source Code Pro", monospace;
+  --shadow: rgba(72, 61, 139, 0.5) 5px 5px, rgba(72, 61, 139, 0.4) 10px 10px,
+    rgba(72, 61, 139, 0.3) 15px 15px, rgba(72, 61, 139, 0.2) 20px 20px,
+    rgba(72, 61, 139, 0.1) 25px 25px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.sidebar {
+  background-color: var(--primaryColor);
+  background-image: linear-gradient(
+    to top,
+    rgb(78 102 171) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  width: 100vw;
+  height: 15vh;
+  transition: transform 0.3s;
+}
+
+.sidebar nav {
+  padding: 2rem;
+  height: 100%;
+}
+
+.sidebar nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.sidebar nav li {
+  list-style: none;
+}
+
+.sidebar nav a {
+  color: white;
+  font-family: var(--lato);
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0 #fff;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out;
+}
+
+.sidebar nav a:hover {
+  border-radius: 0.3rem;
+  box-shadow: inset 10rem 0 0 0 #fff;
+  color: black;
+}
+.active {
+  color: black !important;
+}
+
+.sidehide {
+  transform: translateY(-15rem);
+  position: absolute;
+}
+
+.hamburger {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  left: 1%;
+  top: 1%;
+}
+.cross{
+  height: 30px;
+  
+}
+.ham{
+  width: 25px;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(78 102 171) 10.8%,
+    rgb(173 175 230) 94.3%
+  );
+}
+.main > h1 {
+  text-align: center;
+  padding: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: var(--montserrat);
+  color: #fff;
+  text-transform: uppercase;
+  background-size: 0;
+  background-image: linear-gradient(to right, #fff, #fff);
+}
+
+.main > h1:hover {
+  background-image: linear-gradient(to right, #ee0a67, #ffe3f1);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main > h1:before {
+  content: "";
+  position: absolute;
+  transition: 0.3s;
+  border-bottom: 0px solid #ff3c78;
+  width: 0;
+  height: 3.5rem;
+}
+.main > h1:hover:before {
+  border-bottom: 2px solid #ff3c78;
+  width: 38rem;
+  height: 3.5rem;
+}
+.contact {
+  width: 75%;
+  height: 45%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 3rem;
+  border-radius: 1rem;
+}
+
+.logo {
+  cursor: pointer;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1230px) {
+  .main {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(78 102 171) 10.8%,
+      rgb(173 175 230) 94.3%
+    );
+  }
+
+  .main > h1:hover:before {
+    border-bottom: 0px solid #ff3c78;
+    width: 0;
+    height: 0;
+  }
+  .sidebar {
+    background-image: linear-gradient(
+      to top,
+      rgb(78 102 171) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+  }
+  .sidehide {
+    transform: translateY(-40rem);
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .main {
+    height: 100vh;
+    padding-bottom: 1rem;
+  }
+  .sidebar {
+    width: 100vw;
+    height: 50vh;
+  }
+  .sidebar nav ul {
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .projectContainer {
+    align-content: center;
+    padding: 2rem;
+  }
+ 
+}
+@media screen and (max-width: 430px) {
+  .main {
+    height: fit-content;
+  }
+
+}
