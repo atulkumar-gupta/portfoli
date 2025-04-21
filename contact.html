@@ -2,30 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact me</title>
-    <link rel="stylesheet" href="css/contact.css">
-    <script src="js/index.js" defer></script>
-    <script src="https://kit.fontawesome.com/33abc6debc.js" crossorigin="anonymous" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            padding: 2rem;
+        }
+
+        .contact-container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="contai">
-            <nav>
-                <ul>
-                    <li><a href="/" class="sideBtn">Home</a></li>
-                    <li ><a href="/resume.html" class="sideBtn">Resume</a></li>
-                    <li ><a href="/skills.html" class="sideBtn">Skills</a></li>
-                    <li ><a href="/projects.html" class="sideBtn">Projects</a></li>
-                    <li ><a href="/Internship.html" class="sideBtn">Internship</a></li>
-                    <li ><a href="/contact.html" class="sideBtn active">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
 
-        <div class="contact-container">
+    <div class="contact-container">
         <h2>Contact Me</h2>
         <form id="contact-form" action="https://formspree.io/f/mldbrbpp" method="POST">
             <label for="name">Your Name:</label>
@@ -73,6 +115,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
